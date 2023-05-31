@@ -152,7 +152,7 @@
                     }
                     echo "</select><br><br>";
 
-                    // Max Price
+                    // Min Price
                     echo "Min Price: <select name='min_price'>";
                     echo "<option value=''>Any</option>";
                     for ($i = 5000; $i <= 25000; $i += 500) {
