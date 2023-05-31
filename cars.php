@@ -116,6 +116,7 @@
                 <form method="GET">
                     <!-- Filter options -->
                     <?php
+                    // Make
                     echo "Make: <select name='make'>";
                     echo "<option value=''>All</option>";
                     foreach ($makeOptions as $makeOption) {
@@ -124,6 +125,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Colour
                     echo "Colour: <select name='colour'>";
                     echo "<option value=''>All</option>";
                     foreach ($colourOptions as $colourOption) {
@@ -132,6 +134,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Min Miles
                     echo "Min Miles: <select name='min_miles'>";
                     echo "<option value=''>Any</option>";
                     for ($i = 5000; $i <= 80000; $i += 5000) {
@@ -140,6 +143,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Max Miles
                     echo "Max Miles: <select name='max_miles'>";
                     echo "<option value=''>Any</option>";
                     for ($i = 10000; $i <= 130000; $i += 10000) {
@@ -148,6 +152,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Max Price
                     echo "Min Price: <select name='min_price'>";
                     echo "<option value=''>Any</option>";
                     for ($i = 5000; $i <= 25000; $i += 500) {
@@ -156,6 +161,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Max Price
                     echo "Max Price: <select name='max_price'>";
                     echo "<option value=''>Any</option>";
                     for ($i = 10000; $i <= 35000; $i += 500) {
@@ -164,6 +170,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Town
                     echo "Town: <select name='town'>";
                     echo "<option value=''>All</option>";
                     foreach ($townOptions as $townOption) {
@@ -172,6 +179,7 @@
                     }
                     echo "</select><br><br>";
 
+                    // Submit
                     echo "<input style='background-color: #9492FF; border-radius: 5px; border: none; padding: 5px 20px;' type='submit' value='Filter'>";
                     echo "</form>";
                     echo "<form method='GET' action='cars.php' style='margin: 10px 0px;'>";
