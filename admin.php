@@ -69,7 +69,7 @@
                                     <h3 id="car-header">Car Information</h3>
                                     <div class="admin-content-car-info">
                                         <div>
-                                            <form action="admin.php?tool=add" method="POST">
+                                            <form action="admin.php?tool=add" method="POST" onsubmit="return validateForm();">
                                             <div class="form-group">
                                                 <label for="make">Make:</label>
                                                 <input type="text" id="make" name="make" required>
@@ -466,5 +466,95 @@
             // Toggle the "active" class on the hamburger button
             this.classList.toggle('active');
         });
+
+        // Add records validation
+        function validateForm() {
+            var make = document.getElementById("make").value;
+            var model = document.getElementById("model").value;
+            var reg = document.getElementById("reg").value;
+            var colour = document.getElementById("colour").value;
+            var miles = document.getElementById("miles").value;
+            var price = document.getElementById("price").value;
+            var dealer = document.getElementById("dealer").value;
+            var town = document.getElementById("town").value;
+            var telephone = document.getElementById("telephone").value;
+            var description = document.getElementById("description").value;
+            var carIndex = document.getElementById("carIndex").value;
+            var region = document.getElementById("region").value;
+
+            // Make validation
+            if (make.length > 10) {
+                alert("Make should be up to 10 characters long.");
+                return false;
+            }
+
+            // Model validation
+            if (model.length > 15) {
+                alert("Model should be up to 15 characters long.");
+                return false;
+            }
+
+            // Reg validation
+            if (reg.length !== 1) {
+                alert("Registration should be 1 character long.");
+                return false;
+            }
+
+            // Colour validation
+            if (colour.length > 10) {
+                alert("Colour should be up to 10 characters long.");
+                return false;
+            }
+
+            // Miles validation
+            if (miles.length > 6 || isNaN(miles)) {
+                alert("Miles should be a number up to 6 digits long.");
+                return false;
+            }
+
+            // Price validation
+            if (price.length > 11 || isNaN(price)) {
+                alert("Price should be a number up to 11 digits long.");
+                return false;
+            }
+
+            // Dealer validation
+            if (dealer.length > 50) {
+                alert("Dealer should be up to 50 characters long.");
+                return false;
+            }
+
+            // Town validation
+            if (town.length > 20) {
+                alert("Town should be up to 20 characters long.");
+                return false;
+            }
+
+            // Telephone validation
+            if (telephone.length > 15) {
+                alert("Telephone should be up to 15 characters long.");
+                return false;
+            }
+
+            // Description validation
+            if (description.length > 30) {
+                alert("Description should be up to 30 characters long.");
+                return false;
+            }
+
+            // Car Index validation
+            if (carIndex.length > 11 || isNaN(carIndex)) {
+                alert("Car Index should be a number up to 11 digits long.");
+                return false;
+            }
+
+            // Region validation
+            if (region.length > 10) {
+                alert("Region should be up to 10 characters long.");
+                return false;
+            }
+
+            return true;
+        }
     </script>
 </html>
